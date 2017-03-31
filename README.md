@@ -79,10 +79,11 @@ const mocha = require('pon-task-mocha')
 
 async function tryExample () {
   let run = pon({
-    'test:mocha': mocha('test/**/*.js')
+    'test:mocha': mocha('test/**/*.js'),
+    'test': [ 'test:mocha' ]
   })
 
-  run('test:*')
+  run('test')
 }
 
 tryExample()
@@ -100,13 +101,17 @@ Signatures
 ---------
 
 
-### `define(options) -> function`
+### `define(-, options, -) -> function`
 
 Define task
 
 | Param | type | Description |
 | ---- | --- | ----------- |
+| - | string&#124;string[] | Source file name pattern |
 | options | Object |  Optional settings |
+| options.reporter | string |  Mocha reporter |
+| options.timeout | number |  Mocha test timeout |
+| - | string&#124;string[] | Test source filename (Used as watch target) |
 
 
 
