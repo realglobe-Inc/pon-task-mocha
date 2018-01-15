@@ -1,6 +1,6 @@
 {
   "name": "pon-task-mocha",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Pon tasks to run mocha tests",
   "main": "lib",
   "browser": "shim/browser",
