@@ -6,7 +6,7 @@
 
 const define = require('../lib/define.js')
 const ponContext = require('pon-context')
-const { strict: { ok, equal } } = require('assert')
+const { strict: { ok } } = require('assert')
 
 describe('define', function () {
   this.timeout(3000)
@@ -26,7 +26,7 @@ describe('define', function () {
     const caught = await Promise.resolve(task(ctx))
       .then(() => null)
       .catch((e) => e)
-    ok(caught)
+    ok(!!caught)
   })
 })
 
