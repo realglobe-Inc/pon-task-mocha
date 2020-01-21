@@ -1,14 +1,17 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 before_install:
-  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
-  - npm install jsdoc publish-if-needed npm@latest -g
+- echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+- npm install jsdoc publish-if-needed npm@latest -g
 install:
-  - npm install
+- npm install
 script:
-  - "./ci/build.js"
-  - "./ci/shim.js"
-  - "./ci/test.js"
+- "./ci/build.js"
+- "./ci/shim.js"
+- "./ci/test.js"
 after_success:
-  - publish-if-needed
+- publish-if-needed
+env:
+  global:
+    secure: 0hbX84F/9hPou9sIUaQcND1T/EQz0DG02Rlcmehw5BiYriqjfw6c5so3mB2+HCJljrgL2zU+Hf3Vrg2bdFNr3wdNPBxVLSgRg+zwS/gcDvVuFYX2925oTZuma/ygeTC6qFoSJFYiGtIpsB1l98xyI3Q4XikpgzEdHseA9rZWgmvWpy6U+L/anYxbudzYUC/8g9m5eEeSnxR5fNpgbq/W5embuYpy7XlEqetylcpvJz1oBzeF0njZRp384L+tm71MVU3bEnwuRVqDUvepiiQW/Dd2qeG2jf9u0Jak+VKVGUGuTFMu1G+5yykGBYlYYuorw/8oNzNLbaYRgUUpDWOQ0ryhId+bHhdu6BMIM5Ir7qV24XEGjaqIZBrIEtmfud0Avzus7LCb6hV6TKbHHf4iXJCbImGdqoQEy4ROSXFHF/L0Wen2qRqK+jVAUkdEeMwXGCyDJ/2R7fnwXOD8lTxpmGzGfvxpa3U0U7LvA9A5i3Rjt3ZODPtjauZNCbwn4Xk3wbSHlNiaNBqYbnD7AObsLyGtM9JJQ5DYyIU2HBSrQtNKFKR0+aYEb+B2gNcu18SVksIKpc6JUFdQVk3zMLllskFxI3OZXuNVy/Ots+6o87cRclbdcgVtAnArgXO802wn9CxkAly4/gnAab5lpxc/6xco6F2+CHLbXF6rar5djdY=
