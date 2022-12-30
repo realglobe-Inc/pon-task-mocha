@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/realglobe-Inc/pon-task-mocha#readme",
   "dependencies": {
-    "mocha": "^7.0.0",
+    "mocha": "^10.2.0",
     "pon-task-watch": "^2.3.0"
   },
   "devDependencies": {
